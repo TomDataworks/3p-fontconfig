@@ -25,6 +25,18 @@
             <key>name</key>
             <string>linux</string>
           </map>
+          <key>linux64</key>
+          <map>
+            <key>archive</key>
+            <map>
+              <key>hash</key>
+              <string>80efc48883a32fa401dc584a37c82464</string>
+              <key>url</key>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-linux/downloads/expat-2.1.0-linux64-20141127.tar.bz2</string>
+            </map>
+            <key>name</key>
+            <string>linux64</string>
+          </map>
         </map>
       </map>
       <key>freetype</key>
@@ -49,6 +61,18 @@
             <key>name</key>
             <string>linux</string>
           </map>
+          <key>linux64</key>
+          <map>
+            <key>archive</key>
+            <map>
+              <key>hash</key>
+              <string>9cfdd763fe24b089137b05f7dd8e328b</string>
+              <key>url</key>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-linux/downloads/freetype-2.5.3-linux64-20141128.tar.bz2</string>
+            </map>
+            <key>name</key>
+            <string>linux64</string>
+          </map>
         </map>
       </map>
       <key>zlib</key>
@@ -72,6 +96,18 @@
             </map>
             <key>name</key>
             <string>darwin</string>
+          </map>
+          <key>linux64</key>
+          <map>
+            <key>archive</key>
+            <map>
+              <key>hash</key>
+              <string>34f49ffedc5ee34ceb1f10767d9f69b5</string>
+              <key>url</key>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-linux/downloads/zlib-1.2.8-linux64-20141125.tar.bz2</string>
+            </map>
+            <key>name</key>
+            <string>linux64</string>
           </map>
         </map>
       </map>
@@ -124,6 +160,41 @@
           </array>
           <key>name</key>
           <string>linux</string>
+        </map>
+        <key>linux64</key>
+        <map>
+          <key>build_directory</key>
+          <string>stage</string>
+          <key>configurations</key>
+          <map>
+            <key>Release</key>
+            <map>
+              <key>build</key>
+              <map>
+                <key>arguments</key>
+                <array>
+                  <string>../build-cmd.sh</string>
+                </array>
+                <key>command</key>
+                <string>bash</string>
+              </map>
+              <key>default</key>
+              <string>True</string>
+              <key>name</key>
+              <string>Release</string>
+            </map>
+          </map>
+          <key>manifest</key>
+          <array>
+            <string>include/fontconfig/*.h</string>
+            <string>lib/debug/*.a</string>
+            <string>lib/debug/*.so*</string>
+            <string>lib/release/*.a</string>
+            <string>lib/release/*.so*</string>
+            <string>docs/fontconfig/README.Linden</string>
+          </array>
+          <key>name</key>
+          <string>linux64</string>
         </map>
       </map>
       <key>version</key>
