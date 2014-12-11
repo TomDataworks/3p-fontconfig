@@ -203,7 +203,7 @@ pushd "$FONTCONFIG_SOURCE_DIR"
                 ./configure \
                 --enable-static --enable-shared --disable-docs \
                 --with-pic --disable-silent-rules \
-                --prefix="\${AUTOBUILD_PACKAGES_DIR}" --libdir="\${prefix}/lib/debug/" --includedir="\${prefix}/include"
+                --prefix="\${AUTOBUILD_PACKAGES_DIR}" --libdir="\${prefix}/lib/release/" --includedir="\${prefix}/include"
             make LDFLAGS="$opts -g -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype"
             make install DESTDIR="$stage" LDFLAGS="$opts -g -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype"
 
