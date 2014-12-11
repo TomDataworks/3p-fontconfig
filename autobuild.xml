@@ -30,9 +30,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>80efc48883a32fa401dc584a37c82464</string>
+              <string>d92b89d9c8eb9c57346f9896712c1e27</string>
               <key>url</key>
-              <string>https://bitbucket.org/alchemyviewer/publiclibs-linux/downloads/expat-2.1.0-linux64-20141127.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux/lib/expat-2.1.0-linux64-20141210.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -66,9 +66,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>9cfdd763fe24b089137b05f7dd8e328b</string>
+              <string>b20abbb02c6d3ee40678858445cbf07c</string>
               <key>url</key>
-              <string>https://bitbucket.org/alchemyviewer/publiclibs-linux/downloads/freetype-2.5.3-linux64-20141128.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux/lib/freetype-2.5.3-linux64-20141210.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -102,9 +102,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>34f49ffedc5ee34ceb1f10767d9f69b5</string>
+              <string>23967544a78df78fcf3a69a30fee33a8</string>
               <key>url</key>
-              <string>https://bitbucket.org/alchemyviewer/publiclibs-linux/downloads/zlib-1.2.8-linux64-20141125.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux/lib/zlib-1.2.8-linux64-20141209.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
