@@ -24,6 +24,8 @@ eval "$("$AUTOBUILD" source_environment)"
 
 stage="$(pwd)/stage"
 
+echo "${FONTCONFIG_VERSION}" > "${stage}/VERSION.txt"
+
 ZLIB_INCLUDE="${stage}"/packages/include/zlib
 
 [ -f "$ZLIB_INCLUDE"/zlib.h ] || fail "You haven't installed the zlib package yet."

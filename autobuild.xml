@@ -5,8 +5,12 @@
     <map>
       <key>expat</key>
       <map>
+        <key>copyright</key>
+        <string>Copyright (c) 1998, 1999, 2000 Thai Open Source Software Center Ltd and Clark Cooper - Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006 Expat maintainers.</string>
+        <key>description</key>
+        <string>Expat is an XML parser library written in C</string>
         <key>license</key>
-        <string>mit</string>
+        <string>expat</string>
         <key>license_file</key>
         <string>LICENSES/expat.txt</string>
         <key>name</key>
@@ -30,19 +34,27 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>d92b89d9c8eb9c57346f9896712c1e27</string>
+              <string>13c66126ef85daf9fc145eabde6426a7</string>
+              <key>hash_algorithm</key>
+              <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux/lib/expat-2.1.0-linux64-20141210.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib/expat-2.1.0-linux64-201501030119.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
           </map>
         </map>
+        <key>version</key>
+        <string>2.1.0</string>
       </map>
       <key>freetype</key>
       <map>
+        <key>copyright</key>
+        <string>Copyright 2006-2014 by David Turner, Robert Wilhelm, and Werner Lemberg.</string>
+        <key>description</key>
+        <string>Font rendering library</string>
         <key>license</key>
-        <string>freetype</string>
+        <string>FreeType</string>
         <key>license_file</key>
         <string>LICENSES/freetype.txt</string>
         <key>name</key>
@@ -66,17 +78,25 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>b20abbb02c6d3ee40678858445cbf07c</string>
+              <string>73a1563b512eee0795c66e202845f39b</string>
+              <key>hash_algorithm</key>
+              <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux/lib/freetype-2.5.3-linux64-20141210.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib/freetype-2.5.5-linux64-201501030502.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
           </map>
         </map>
+        <key>version</key>
+        <string>2.5.5</string>
       </map>
       <key>zlib</key>
       <map>
+        <key>copyright</key>
+        <string>Copyright (C) 1995-2013 Jean-loup Gailly and Mark Adler</string>
+        <key>description</key>
+        <string>Zlib Data Compression Library</string>
         <key>license</key>
         <string>zlib</string>
         <key>license_file</key>
@@ -102,14 +122,18 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>23967544a78df78fcf3a69a30fee33a8</string>
+              <string>7e02ce63286a14c28e410fd399e7a748</string>
+              <key>hash_algorithm</key>
+              <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux/lib/zlib-1.2.8-linux64-20141209.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib/zlib-1.2.8-linux64-201501030147.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
           </map>
         </map>
+        <key>version</key>
+        <string>1.2.8</string>
       </map>
     </map>
     <key>package_description</key>
@@ -199,12 +223,12 @@
           <string>linux64</string>
         </map>
       </map>
-      <key>version</key>
-      <string>2.11.0</string>
+      <key>version_file</key>
+      <string>VERSION.txt</string>
     </map>
     <key>type</key>
     <string>autobuild</string>
     <key>version</key>
-    <string>1.2</string>
+    <string>1.3</string>
   </map>
 </llsd>
