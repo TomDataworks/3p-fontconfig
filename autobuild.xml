@@ -34,11 +34,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>13c66126ef85daf9fc145eabde6426a7</string>
+              <string>735951f1e0a8788da1ffdab40826a7e3</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux64/lib/expat-2.1.0-linux64-201501030119.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib/expat-2.1.0-linux64-201504091059.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -78,11 +78,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>73a1563b512eee0795c66e202845f39b</string>
+              <string>4ba4b7e6efc1a267299aa2e03d02e13c</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux64/lib/freetype-2.5.5-linux64-201501030502.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib/freetype-2.5.5-linux64-201504181357.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -122,11 +122,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>7e02ce63286a14c28e410fd399e7a748</string>
+              <string>97410adf62be4d2a9d0012bcb5182dc6</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux64/lib/zlib-1.2.8-linux64-201501030147.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib/zlib-1.2.8-linux64-201504091720.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
