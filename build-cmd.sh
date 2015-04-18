@@ -149,6 +149,7 @@ pushd "$FONTCONFIG_SOURCE_DIR"
 
             # Default target to 64-bit
             opts="${TARGET_OPTS:--m64}"
+            HARDENED="-fstack-protector-strong -D_FORTIFY_SOURCE=2"
 
             # Handle any deliberate platform targeting
             if [ -z "$TARGET_CPPFLAGS" ]; then
@@ -198,8 +199,8 @@ pushd "$FONTCONFIG_SOURCE_DIR"
             make distclean 
 
             # Release last
-            CFLAGS="$opts -g -O2" \
-                CXXFLAGS="$opts -g -O2" \
+            CFLAGS="$opts -g -O2 $HARDENED" \
+                CXXFLAGS="$opts -g -O2 $HARDENED" \
                 LDFLAGS="$opts -g -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype" \
                 PKG_CONFIG_LIBDIR="$stage/packages/lib/release/pkgconfig" \
                 ./configure \
