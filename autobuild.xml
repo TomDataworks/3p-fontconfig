@@ -78,11 +78,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>4ba4b7e6efc1a267299aa2e03d02e13c</string>
+              <string>01ec991d548bfc599a26538f91cdf475</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux64/lib/freetype-2.5.5-linux64-201504181357.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib/freetype-2.5.5-linux64-201504230101.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
