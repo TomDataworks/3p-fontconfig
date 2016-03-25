@@ -34,23 +34,23 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>b863aeee79defcd7f10860f19b97e254</string>
+              <string>3ed12f7d7b1a3bda07a3c6d8227a3bf2</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux64/lib/expat-2.1.0-linux64-201504222216.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib-trusty/expat-2.1.1-linux64-201603232308.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
           </map>
         </map>
         <key>version</key>
-        <string>2.1.0</string>
+        <string>2.1.1</string>
       </map>
       <key>freetype</key>
       <map>
         <key>copyright</key>
-        <string>Copyright 2006-2015 by David Turner, Robert Wilhelm, and Werner Lemberg.</string>
+        <string>Copyright 2006-2016 by David Turner, Robert Wilhelm, and Werner Lemberg.</string>
         <key>description</key>
         <string>Font rendering library</string>
         <key>license</key>
@@ -78,18 +78,18 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>f0588eb6aba810febd3ad48e6a259436</string>
+              <string>b10ba0775b9f1033daf580a2cb55789d</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux64/lib/freetype-2.6.0-linux64-201507231602.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib-trusty/freetype-2.6.3-linux64-201603241755.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
           </map>
         </map>
         <key>version</key>
-        <string>2.6.0</string>
+        <string>2.6.3</string>
       </map>
       <key>zlib</key>
       <map>
@@ -122,11 +122,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>461a0af0346a9140e7bb598eb8e78905</string>
+              <string>1eaee9888043648d5f09716b771dcb4b</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux64/lib/zlib-1.2.8-linux64-201504222303.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib-trusty/zlib-1.2.8-linux64-201603240746.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
