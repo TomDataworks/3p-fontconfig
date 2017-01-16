@@ -55,8 +55,9 @@ pushd "$FONTCONFIG_SOURCE_DIR"
                 export CXX=/usr/bin/g++-4.8
             fi
 
-            # Default target to 32-bit
+            # Default target to 64-bit
             opts="${TARGET_OPTS:--m32}"
+            HARDENED="-fstack-protector -D_FORTIFY_SOURCE=2"
 
             # Handle any deliberate platform targeting
             if [ -z "$TARGET_CPPFLAGS" ]; then
@@ -66,6 +67,8 @@ pushd "$FONTCONFIG_SOURCE_DIR"
                 # Incorporate special pre-processing flags
                 export CPPFLAGS="$TARGET_CPPFLAGS" 
             fi
+
+            fix_pkgconfig_prefix "$stage/packages"
 
             # First debug
 
@@ -85,41 +88,39 @@ pushd "$FONTCONFIG_SOURCE_DIR"
             # dependent packages.  Make-time LDFLAGS adds an --exclude-libs option
             # to prevent re-export of archive symbols.
 
-            CFLAGS="$opts -g -O0" \
-                CXXFLAGS="$opts -g -O0" \
-                LDFLAGS="$opts -g -L$stage/packages/lib/debug/ -L$stage/packages/lib/release/" \
+            CFLAGS="$opts -g -Og" \
+                CXXFLAGS="$opts -g -Og" \
+                LDFLAGS="$opts -g -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype" \
+                PKG_CONFIG_LIBDIR="$stage/packages/lib/debug/pkgconfig" \
                 ./configure \
                 --enable-static --enable-shared --disable-docs \
-                --with-pic --without-pkgconfigdir --disable-silent-rules \
-                --with-expat-includes="$stage"/packages/include/expat/ \
-                --with-expat-lib="$stage"/packages/lib/release/ \
-                --prefix="$stage" --libdir="$stage"/lib/debug/
-            make LDFLAGS="$opts -g -L$stage/packages/lib/debug/ -L$stage/packages/lib/release/ -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype"
-            make install LDFLAGS="$opts -g -L$stage/packages/lib/debug/ -L$stage/packages/lib/release/ -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype"
+                --with-pic --disable-silent-rules \
+                --prefix="\${AUTOBUILD_PACKAGES_DIR}" --libdir="\${prefix}/lib/debug/" --includedir="\${prefix}/include"
+            make LDFLAGS="$opts -g -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype"
+            make install DESTDIR="$stage" LDFLAGS="$opts -g -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype"
 
             # conditionally run unit tests
             if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
-                make check LDFLAGS="$opts -g -L$stage/packages/lib/debug/ -L$stage/packages/lib/release/ -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype"
+                make check LDFLAGS="$opts -g -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype"
             fi
 
             make distclean 
 
             # Release last
-            CFLAGS="$opts -g -O2" \
-                CXXFLAGS="$opts -g -O2" \
-                LDFLAGS="$opts -g -L$stage/packages/lib/release/" \
+            CFLAGS="$opts -g -O2 $HARDENED" \
+                CXXFLAGS="$opts -g -O2 $HARDENED" \
+                LDFLAGS="$opts -g -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype" \
+                PKG_CONFIG_LIBDIR="$stage/packages/lib/release/pkgconfig" \
                 ./configure \
                 --enable-static --enable-shared --disable-docs \
-                --with-pic --without-pkgconfigdir --disable-silent-rules \
-                --with-expat-includes="$stage"/packages/include/expat/ \
-                --with-expat-lib="$stage"/packages/lib/release/ \
-                --prefix="$stage" --libdir="$stage"/lib/release/
-            make LDFLAGS="$opts -g -L$stage/packages/lib/release/ -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype"
-            make install LDFLAGS="$opts -g -L$stage/packages/lib/release/ -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype"
+                --with-pic --disable-silent-rules \
+                --prefix="\${AUTOBUILD_PACKAGES_DIR}" --libdir="\${prefix}/lib/release/" --includedir="\${prefix}/include"
+            make LDFLAGS="$opts -g -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype"
+            make install DESTDIR="$stage" LDFLAGS="$opts -g -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype"
 
             # conditionally run unit tests
             if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
-                make check LDFLAGS="$opts -g -L$stage/packages/lib/release/ -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype"
+                make check LDFLAGS="$opts -g -Wl,--exclude-libs,libz:libxml2:libexpat:libfreetype"
             fi
 
             make distclean 
@@ -217,6 +218,7 @@ pushd "$FONTCONFIG_SOURCE_DIR"
 
             make distclean 
         ;;
+
 
         *)
             echo "build not supported."
